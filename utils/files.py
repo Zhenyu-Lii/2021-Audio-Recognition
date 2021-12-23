@@ -6,7 +6,7 @@ data_path = "/Users/zou/datasets/CASIA/6"
 
 def remove(file_path):
     """批量删除指定路径下所有非 `.wav` 文件"""
-	for root, dirs, files in os.walk(file_path):
+    for root, dirs, files in os.walk(file_path):
 		for item in files:
 			if not item.endswith('.wav'):
 				try:
@@ -33,7 +33,7 @@ def rename(file_path):
 
 def move(file_path):
     """把音频按情感分类，放在不同文件夹下"""
-	for root, dirs, files in os.walk(file_path):
+    for root, dirs, files in os.walk(file_path):
 		for item in files:
 			if item.endswith('.wav'):
 				emotion_name = root.split('/')[-1]

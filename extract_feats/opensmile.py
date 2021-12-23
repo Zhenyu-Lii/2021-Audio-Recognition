@@ -74,7 +74,7 @@ def load_feature(
     # 标准化模型路径
     scaler_path = os.path.join(config.checkpoint_path, 'SCALER_OPENSMILE.m')
 
-    if train == True:
+    if train is True:
         # 标准化数据
         scaler = StandardScaler().fit(X)
         # 保存标准化模型
